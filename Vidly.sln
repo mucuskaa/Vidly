@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vidly", "Vidly.Host\Vidly.c
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\DataLayer.csproj", "{A0E9176B-D971-4025-B92E-81B4186828B1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{353D92F9-0002-4207-B71E-7EBE36EE9E38}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{A0E9176B-D971-4025-B92E-81B4186828B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0E9176B-D971-4025-B92E-81B4186828B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0E9176B-D971-4025-B92E-81B4186828B1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{353D92F9-0002-4207-B71E-7EBE36EE9E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{353D92F9-0002-4207-B71E-7EBE36EE9E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{353D92F9-0002-4207-B71E-7EBE36EE9E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{353D92F9-0002-4207-B71E-7EBE36EE9E38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
