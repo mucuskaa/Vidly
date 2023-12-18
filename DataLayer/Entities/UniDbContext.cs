@@ -1,23 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 
 namespace DataLayer.Entities
 {
     public class UniDbContext : DbContext
     {
-        public UniDbContext()
-        {
-                
-        }
         public UniDbContext(DbContextOptions<UniDbContext> options)
             :base(options)
         {
         }
-
+      
         public DbSet<Faculty> Faculties { get; set; }
         public DbSet<Chair> Chairs { get; set; }
         public DbSet<Speciality> Specialities { get; set; }
