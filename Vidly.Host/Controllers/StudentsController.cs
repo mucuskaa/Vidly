@@ -18,9 +18,9 @@ namespace Vidly.Controllers
         {
             IEnumerable<Student> students = (id.HasValue) ?
               await _context.Students
-                .Include(s => s.Group)
-                .Where(s => s.Group != null && s.Group.Id == id).ToListAsync()  : 
-               await _context.Students.ToListAsync();         
+                .Where(s => s.Group != null && s.Group.Id == id)
+                .ToListAsync()  : 
+              await _context.Students.ToListAsync();         
 
             return View(students);
         }
