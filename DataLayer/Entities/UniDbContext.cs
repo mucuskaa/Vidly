@@ -9,6 +9,10 @@ namespace DataLayer.Entities
 {
     public class UniDbContext : DbContext
     {
+        public UniDbContext()
+        {
+                
+        }
         public UniDbContext(DbContextOptions<UniDbContext> options)
             :base(options)
         {
