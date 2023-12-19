@@ -1,29 +1,69 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html {
-  font-size: 14px;
+    color: #1b1b1b;
+    font-size: 14px;
+}
+
+a,
+a:visited,
+a:link {
+    text-decoration: none;
+    color: inherit;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
+.image-size {
+    display: block;
+    height: 350px;
+    width: 500px;
 }
 
-.image-size
-{
-  height:350px;
-  width:500px;
-  margin-top:50px;
+.nav-layout {
+    display: flex;
+    justify-content: space-between;
 }
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.functional-button {
+    border: 1px solid #1b1b1b;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+
+.university-description {
+    max-width: 400px;
+}
+

@@ -1,8 +1,5 @@
 ﻿@model DataLayer.Entities.Person
 
-@{
-    Layout = null;
-}
 
 <!DOCTYPE html>
 
@@ -46,8 +43,8 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+            <input type="submit" value="Delete" class="functional-button" /> |
+            <a asp-action="Index" class="functional-button">Back to List</a>
     </form>
 </div>
 </body>

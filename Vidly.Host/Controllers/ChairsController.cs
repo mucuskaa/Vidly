@@ -19,9 +19,15 @@ namespace Vidly.Controllers
         }
 
         // GET: Chairs
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id)
         {
-            return View(await _context.Chairs.ToListAsync());
+            IEnumerable<Chair> chairs = (id.HasValue) ?
+                await _context.Chairs
+                .Where(c => c.Faculty != null && c.Faculty.Id == id)
+                .ToListAsync() :
+                await _context.Chairs.ToListAsync();
+
+            return View(chairs);
         }
 
         // GET: Chairs/Details/5

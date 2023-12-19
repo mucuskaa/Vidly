@@ -19,9 +19,15 @@ namespace Vidly.Controllers
         }
 
         // GET: Groups
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id)
         {
-            return View(await _context.Groups.ToListAsync());
+            IEnumerable<Group> groups = (id.HasValue) ?
+             await _context.Groups
+               .Where(g => g.Speciality != null && g.Speciality.Id == id)
+               .ToListAsync() :
+             await _context.Groups.ToListAsync();
+
+            return View(groups);
         }
 
         // GET: Groups/Details/5

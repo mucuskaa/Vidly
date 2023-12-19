@@ -1,9 +1,5 @@
 ﻿@model DataLayer.Entities.Employee
 
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
 
 <html>
@@ -44,8 +40,8 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+        <a asp-action="Edit" class="functional-button" asp-route-id="@Model?.Id">Edit</a> |
+        <a asp-action="Index" class="functional-button">Back to List</a>
 </div>
 </body>
 </html>

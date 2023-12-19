@@ -33,7 +33,8 @@ namespace Vidly.Controllers
             }
 
             var faculty = await _context.Faculties
-                .FirstOrDefaultAsync(m => m.Id == id);
+         .Include(f => f.Dean) 
+         .FirstOrDefaultAsync(m => m.Id == id);
             if (faculty == null)
             {
                 return NotFound();
