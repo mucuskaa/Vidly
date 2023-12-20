@@ -20,6 +20,25 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Name)
         </dd>
+            <dt class="col-sm-2">
+                Head
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Head.FirstName)
+                @Html.DisplayFor(model => model.Head.LastName)
+            </dd>
+            <dt class="col-sm-2">
+                Phone
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Head.Phone)
+            </dd>
+            <dt class="col-sm-2">
+                Email
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Head.Email)
+            </dd>
     </dl>
 </div>
 <div>

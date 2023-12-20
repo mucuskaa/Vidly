@@ -18,7 +18,6 @@ namespace Vidly.Controllers
             _context = context;
         }
 
-        // GET: Chairs
         public async Task<IActionResult> Index(int? id)
         {
             IEnumerable<Chair> chairs = (id.HasValue) ?
@@ -30,7 +29,6 @@ namespace Vidly.Controllers
             return View(chairs);
         }
 
-        // GET: Chairs/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -39,6 +37,7 @@ namespace Vidly.Controllers
             }
 
             var chair = await _context.Chairs
+                .Include(c => c.Head)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (chair == null)
             {
@@ -48,15 +47,11 @@ namespace Vidly.Controllers
             return View(chair);
         }
 
-        // GET: Chairs/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Chairs/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name")] Chair chair)
@@ -70,7 +65,6 @@ namespace Vidly.Controllers
             return View(chair);
         }
 
-        // GET: Chairs/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -86,9 +80,6 @@ namespace Vidly.Controllers
             return View(chair);
         }
 
-        // POST: Chairs/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Chair chair)
@@ -121,7 +112,6 @@ namespace Vidly.Controllers
             return View(chair);
         }
 
-        // GET: Chairs/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -139,7 +129,6 @@ namespace Vidly.Controllers
             return View(chair);
         }
 
-        // POST: Chairs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
